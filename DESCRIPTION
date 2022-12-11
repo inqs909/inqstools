@@ -1,0 +1,11 @@
+Package: inqstools
+Type: Package
+Title: INQS Tools
+Version: 0.1.0
+Author: Isaac Quintanilla Salinas
+Maintainer: Isaac Quintanilla Salinas <inqs.909@gmail.com>
+Description: This package contains functions and templates I like to use.
+License: CC0
+Encoding: UTF-8
+LazyData: true
+Depends: R (>= 3.5.0)

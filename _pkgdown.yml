@@ -1,0 +1,5 @@
+destination: public
+url: inqs909.gitlab.io/inqs_tools
+template:
+  bootstrap: 5
+

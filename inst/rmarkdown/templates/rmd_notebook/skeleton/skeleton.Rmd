@@ -1,0 +1,10 @@
+---
+title: "Title"
+author: "Isaac Quintanilla Salinas"
+date: "`r format(Sys.time(),'%m-%d-%Y')`"
+output: 
+  html_notebook:
+    toc: true
+    toc_float: true
+---
+

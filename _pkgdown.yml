@@ -1,5 +1,4 @@
-destination: public
-url: inqs909.gitlab.io/inqs_tools
+url: ~
 template:
   bootstrap: 5
 

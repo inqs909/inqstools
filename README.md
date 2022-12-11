@@ -9,8 +9,8 @@ This is a package containing functions and templates that I like to use.
 To install the package, use the following code:
 
 ```
-#install.packages("remotes")
-#Install R Package
+# install.packages("remotes")
+# Install R Package
 remotes::install_gitlab("inqs909/inqstools")
 ```
 Make sure to install the `remotes` package first.

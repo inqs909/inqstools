@@ -1,4 +1,7 @@
-url: https://inqs909.github.io/inqstools
 template:
-  bootstrap: 5
+  params:
+    bootswatch: flatly
 
+navbar:
+  structure:
+    left:  [home, intro, reference, articles, news]

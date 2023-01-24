@@ -11,6 +11,6 @@ To install the package, use the following code:
 ```
 # install.packages("remotes")
 # Install R Package
-remotes::install_gitlab("inqs909/inqstools")
+remotes::install_github("inqs909/inqstools")
 ```
 Make sure to install the `remotes` package first.

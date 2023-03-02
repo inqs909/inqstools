@@ -12,5 +12,6 @@ output:
 knitr::opts_chunk$set(echo = T)
 knitr::opts_chunk$set(message =  F)
 knitr::opts_chunk$set(warning =  F)
+knitr::opts_chunk$set(error = T)
 ```
 

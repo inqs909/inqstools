@@ -1,0 +1,4 @@
+name: M408 Notebook
+description: >
+   A template for RMD Notebooks for Math 408.
+create_dir: FALSE

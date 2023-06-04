@@ -1,4 +1,6 @@
 url: http://www.inqs.info/inqstools/
 template:
   bootstrap: 5
-
+authors:
+  Isaac Quintanilla Salinas:
+    href: https://www.inqs.info

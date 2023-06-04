@@ -15,7 +15,3 @@ Creates a learnr tutorial with important components to create CI learnr tutorial
 \description{
 A wrapper function that will create a learnr interactive document with the CSUCI theme.
 }
-\examples{
-ci_learnr("test")
-
-}

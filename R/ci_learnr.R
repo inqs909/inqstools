@@ -7,7 +7,6 @@
 #' @return Creates a learnr tutorial with important components to create CI learnr tutorial.
 #' @export
 #'
-#' @examples ci_learnr("test")
 #'
 ci_learnr <- function(name) {
   if (!dir.exists("inst/tutorials/")) {

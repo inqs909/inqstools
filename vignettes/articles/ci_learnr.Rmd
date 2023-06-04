@@ -1,5 +1,5 @@
 ---
-title: "Building `learnr` tutorials using CSUCI theme!"
+title: "Building learnr tutorials using CSUCI theme!"
 ---
 
 ```{r, include = FALSE}

@@ -71,9 +71,14 @@
     
     
 <p>This article provides a brief introduction on how to build
-<code>learnr</code> tutorials using a custom CSUCI theme. This article
-is still a work in progress and will have many mistakes. If you find a
-mistake or bug, please feel free to email me to fix it. Thank you!</p>
+<code>learnr</code> tutorials using a custom CSUCI theme (colors and
+font). This article is still a work in progress and will have many
+mistakes. If you find a mistake or bug, please feel free to email me to
+fix it. Thank you! If you want me to add elements to the themes, please
+let me know and I will see what I can do.</p>
+<div class="section level2">
+<h2 id="installing-and-utilizing-template">Installing and utilizing template<a class="anchor" aria-label="anchor" href="#installing-and-utilizing-template"></a>
+</h2>
 <p>To begin, make sure you install and load the <code>inqstools</code>
 package to access the template.</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
@@ -88,7 +93,100 @@ command:</p>
 <p>where you place the name of the new file in the placholder. You do
 not need to add “.Rmd” to the file. It will automatically do it for
 you.</p>
-  </main>
+</div>
+<div class="section level2">
+<h2 id="contributing-to-csustats-r-package">Contributing to <code>csustats</code> R Package<a class="anchor" aria-label="anchor" href="#contributing-to-csustats-r-package"></a>
+</h2>
+<p>These templates can be used for the <a href="https://www.inqs.info/csustats/" class="external-link">csustats</a> R package, an R
+package I am working on to provide students with R support. If you wish
+to contribute or revise tutorials, I’d be happy to collaborate. Once I
+learn how to collaborate with Github, I will write a set of instructions
+on how to contribute to the package.</p>
+</div>
+<div class="section level2">
+<h2 id="extra-elements">Extra Elements<a class="anchor" aria-label="anchor" href="#extra-elements"></a>
+</h2>
+<p>When I was creating certain tutorials for the <a href="https://www.inqs.info/csustats/" class="external-link">csustats</a> R package, I was
+frustrated with the limitations of the <code>learnr</code> tutorials
+using visual effects, <a href="https://quarto.org/docs/authoring/callouts.html" class="external-link">callouts</a> at
+the time. After googling around, I found <a href="https://yabellini.netlify.app/" class="external-link">Yanina Bellini Saibene</a><a class="footnote-ref" tabindex="0" data-bs-toggle="popover" data-bs-content="&lt;p&gt;I have mad respect for her work. She brings data science
+to Latin America. It also challenges me to learn more about data science
+in Spanish.&lt;/p&gt;"><sup>1</sup></a>
+modification and implementation or <code>learnr</code> templates
+utilizing <code>css</code> to spruce up the tutorial. This inspired me
+to create a template for tutorials with a CSUCI spin, thus the
+<code>ci_learnr</code> function was born that create a template and
+incorporates a <code>scss</code> file to control the elements. While
+creating the template, I realized I can use the <code>scss</code> file
+to create classes that will create callouts fairly easily. The remainder
+of this section will explore some of the extra elements for the
+template</p>
+<div class="section level3">
+<h3 id="callouts">Callouts<a class="anchor" aria-label="anchor" href="#callouts"></a>
+</h3>
+<p>The template is capable of create the following callouts<a class="footnote-ref" tabindex="0" data-bs-toggle="popover" data-bs-content="&lt;p&gt;The value in parenthesis is the code for the callout.&lt;/p&gt;"><sup>2</sup></a>:</p>
+<ul>
+<li><p>Note (info): A blue callout that you can use for
+information</p></li>
+<li><p>Warning (warning): An orange callout that you can use to display
+a warning</p></li>
+<li><p>Danger (danger): A red callout to express something
+important</p></li>
+<li><p>Success (success): a green callout to express success</p></li>
+</ul>
+<p>To utilize a callout, create a <code>div</code> block, surround text
+with <code>:::</code>, and type the code in the parenthesis above to
+indicate you want a callout. Afterwards, create a title for the callout
+using 4 <code>#</code>’s. This will create a callout. Lastly, type the
+information you want to display. The code block below provides a
+skeleton of the block:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode default"><code class="sourceCode default"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>::: info</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>#### Title</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>Information</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>:::</span></code></pre></div>
+<p>If you are using Visual Mode in RStudio, you will need to insert a
+<code>div</code> block and change the Classes option.</p>
+</div>
+<div class="section level3">
+<h3 id="table-of-contents">Table of Contents<a class="anchor" aria-label="anchor" href="#table-of-contents"></a>
+</h3>
+<p>I created a small class, that looks similar to the callouts, to
+create a custom table of contents using CI colors. You can implement
+this class with the following code:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode default"><code class="sourceCode default"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>::: contents</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>### Title</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>- Item 1</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>- Item 2</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>- Item 3</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>:::</span></code></pre></div>
+</div>
+<div class="section level3">
+<h3 id="future-elements">Future Elements<a class="anchor" aria-label="anchor" href="#future-elements"></a>
+</h3>
+<p>As I continue to work on developing new tutorials, i am sure that I
+will need to utilize new classes or elements. Once I learn how to do it,
+I will update the template so anyone can use them.</p>
+<p>If you have a specific idea for an element, please feel free to
+contact me and I will see what I can do. I am not a CS programmer and
+only dabble with <code>css</code>. I will do my best to implement it,
+but no promises.</p>
+<p>If you want to contribute new elements or have better ideas to
+organize the template, I welcome the support. I would love to
+incorporate javascript, if it is possible, to these tutorials. But I do
+not have the time to learn it.</p>
+</div>
+</div>
+
+  </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
+    </nav></aside>
 </div>
 
 

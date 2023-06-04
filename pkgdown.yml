@@ -3,7 +3,7 @@ pkgdown: 2.0.7
 pkgdown_sha: ~
 articles:
   ci_learnr: ci_learnr.html
-last_built: 2023-06-04T06:42Z
+last_built: 2023-06-04T08:02Z
 urls:
   reference: http://www.inqs.info/inqstools/reference
   article: http://www.inqs.info/inqstools/articles

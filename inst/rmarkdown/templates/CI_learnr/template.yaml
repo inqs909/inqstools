@@ -1,0 +1,4 @@
+name: CI_learnr
+description: >
+   A template to create learnr tutorials using CSUCI colors and fonts.
+create_dir: true

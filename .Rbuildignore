@@ -5,3 +5,5 @@
 ^pkgdown$
 .nojekyll
 ^\.github$
+^README.Rmd
+^vignettes/articles$

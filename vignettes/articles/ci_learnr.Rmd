@@ -1,0 +1,32 @@
+---
+title: "Building `learnr` tutorials using CSUCI theme!"
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+This article provides a brief introduction on how to build `learnr` tutorials using a custom CSUCI theme. This article is still a work in progress and will have many mistakes. If you find a mistake or bug, please feel free to email me to fix it. Thank you!
+
+
+To begin, make sure you install and load the `inqstools` package to access the template.
+
+```{r setup}
+#remotes::install_github("inqs909/inqstools")
+library(inqstools)
+```
+
+This will allow you to utilize the `CI_learnr` template to build your interactive tutorial.
+
+To create a template of the CI_learnr RMD file, use the following command:
+
+```{r, eval=FALSE}
+ci_learnr("NAME_OF_FILE")
+```
+
+where you place the name of the new file in the placholder. You do not need to add ".Rmd" to the file. It will automatically do it for you.
+
+

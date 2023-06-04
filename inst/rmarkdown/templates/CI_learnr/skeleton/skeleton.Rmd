@@ -1,0 +1,21 @@
+---
+title: "Name of Tutorial"
+author: "Name here, delete line if anonymous"
+output: 
+  learnr::tutorial:
+    css: css/styles.scss
+    progressive: true
+    allow_skip: true
+runtime: shiny_prerendered
+description: |
+  Write DESCRIPTION of tutorial here
+---
+
+```{r setup, include=FALSE}
+library(learnr)
+library(gradethis)
+knitr::opts_chunk$set(echo = FALSE)
+
+## Set up functions and objects that students will use through out this tutorial
+
+```

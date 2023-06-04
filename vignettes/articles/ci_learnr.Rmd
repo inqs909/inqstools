@@ -9,8 +9,9 @@ knitr::opts_chunk$set(
 )
 ```
 
-This article provides a brief introduction on how to build `learnr` tutorials using a custom CSUCI theme. This article is still a work in progress and will have many mistakes. If you find a mistake or bug, please feel free to email me to fix it. Thank you!
+This article provides a brief introduction on how to build `learnr` tutorials using a custom CSUCI theme (colors and font). This article is still a work in progress and will have many mistakes. If you find a mistake or bug, please feel free to email me to fix it. Thank you! If you want me to add elements to the themes, please let me know and I will see what I can do.
 
+## Installing and utilizing template
 
 To begin, make sure you install and load the `inqstools` package to access the template.
 
@@ -29,4 +30,66 @@ ci_learnr("NAME_OF_FILE")
 
 where you place the name of the new file in the placholder. You do not need to add ".Rmd" to the file. It will automatically do it for you.
 
+## Contributing to `csustats` R Package
 
+These templates can be used for the [csustats](https://www.inqs.info/csustats/) R package, an R package I am working on to provide students with R support. If you wish to contribute or revise tutorials, I'd be happy to collaborate. Once I learn how to collaborate with Github, I will write a set of instructions on how to contribute to the package.
+
+## Extra Elements
+
+When I was creating certain tutorials for the [csustats](https://www.inqs.info/csustats/) R package, I was frustrated with the limitations of the `learnr` tutorials using visual effects, [callouts](https://quarto.org/docs/authoring/callouts.html) at the time. After googling around, I found [Yanina Bellini Saibene](https://yabellini.netlify.app/)[^1] modification and implementation or `learnr` templates utilizing `css` to spruce up the tutorial. This inspired me to create a template for tutorials with a CSUCI spin, thus the `ci_learnr` function was born that create a template and incorporates a `scss` file to control the elements. While creating the template, I realized I can use the `scss` file to create classes that will create callouts fairly easily. The remainder of this section will explore some of the extra elements for the template
+
+[^1]: I have mad respect for her work. She brings data science to Latin America. It also challenges me to learn more about data science in Spanish.
+
+### Callouts
+
+The template is capable of create the following callouts[^2]:
+
+[^2]: The value in parenthesis is the code for the callout.
+
+-   Note (info): A blue callout that you can use for information
+
+-   Warning (warning): An orange callout that you can use to display a warning
+
+-   Danger (danger): A red callout to express something important
+
+-   Success (success): a green callout to express success
+
+To utilize a callout, create a `div` block, surround text with `:::`, and type the code in the parenthesis above to indicate you want a callout. Afterwards, create a title for the callout using 4 `#`'s. This will create a callout. Lastly, type the information you want to display. The code block below provides a skeleton of the block:
+
+``` default
+::: info
+
+#### Title
+
+Information
+
+:::
+```
+
+If you are using Visual Mode in RStudio, you will need to insert a `div` block and change the Classes option.
+
+### Table of Contents
+
+I created a small class, that looks similar to the callouts, to create a custom table of contents using CI colors. You can implement this class with the following code:
+
+``` default
+::: contents
+
+### Title
+
+- Item 1
+
+- Item 2
+
+- Item 3
+
+:::
+```
+
+### Future Elements
+
+As I continue to work on developing new tutorials, i am sure that I will need to utilize new classes or elements. Once I learn how to do it, I will update the template so anyone can use them.
+
+If you have a specific idea for an element, please feel free to contact me and I will see what I can do. I am not a CS programmer and only dabble with `css`. I will do my best to implement it, but no promises.
+
+If you want to contribute new elements or have better ideas to organize the template, I welcome the support. I would love to incorporate javascript, if it is possible, to these tutorials. But I do not have the time to learn it.

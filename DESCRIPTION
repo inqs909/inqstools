@@ -2,13 +2,16 @@ Package: inqstools
 Type: Package
 Title: INQS Tools
 Version: 0.1.2
-Author: Isaac Quintanilla Salinas
-Maintainer: Isaac Quintanilla Salinas <inqs.909@gmail.com>
+Authors@R: c(
+  person("Isaac", "Quintanilla Salinas", 
+  role = c("aut","cre"), email = "inqs.909@gmail.com",
+  comment = c(ORCID = "0000-0002-1137-4310"))
+  )
 Description: This package contains functions and templates I like to use.
 License: CC0
 Encoding: UTF-8
 LazyData: true
-Depends: R (>= 3.5.0)
+Depends: R (>= 4.3.0)
 Imports: rmarkdown
 URL: https://inqs909.github.io/inqstools/
 RoxygenNote: 7.2.3

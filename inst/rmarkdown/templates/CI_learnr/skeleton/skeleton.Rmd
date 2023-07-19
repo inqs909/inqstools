@@ -14,8 +14,39 @@ description: |
 ```{r setup, include=FALSE}
 library(learnr)
 library(gradethis)
+tutorial_options(exercise.timelimit = 60, 
+                 exercise.checker = gradethis::grade_learnr)
+
+gradethis_setup(exercise.reveal_solution = FALSE)
 knitr::opts_chunk$set(echo = FALSE)
 
 ## Set up functions and objects that students will use through out this tutorial
 
+```
+
+
+
+
+## Submit Responses
+
+**Generate a Hash if you need to submit your work for an assignment.**
+
+```{r context="server"}
+learnrhash::encoder_logic()
+```
+
+```{r encode, echo=FALSE}
+learnrhash::encoder_ui(
+  ui_before = shiny::div(
+    "If you have completed this tutorial and are happy with all of your",
+    "solutions, please click the button below to generate your hash and",
+    "submit it using the corresponding tutorial assignment tab on your Learning Management System, if needed.",
+    shiny::tags$br()
+  ))
+```
+
+## Feedback
+
+```{=html}
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSda_bV4VFGk1pgrevik7afgjAlWTA0g9kQE7ZR52S_UQiT3NA/viewform?embedded=true" width="640" height="742" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 ```

@@ -16,8 +16,10 @@ This is a package containing functions and templates that I like to use.
 
 To install the package, use the following code:
 
-    # install.packages("remotes")
-    # Install R Package
-    remotes::install_github("inqs909/inqstools")
+``` r
+install.packages('inqstools', 
+                 repos = c('https://inqs909.r-universe.dev', 
+                 'https://cloud.r-project.org'))
+```
 
 Make sure to install the `remotes` package first.
